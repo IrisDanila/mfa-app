@@ -32,7 +32,9 @@ This is a simple **Multi-Factor Authentication (MFA)** application built with **
    cd mfa-app
 
 2. Install dependencies:
+    ```bash
     npm install
 
 3. Running the App:
+    ```bash
     npm run dev
