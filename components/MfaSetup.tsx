@@ -14,7 +14,7 @@ export default function MfaSetup({ userEmail }: { userEmail: string }) {
       const response = await fetch(`/api/mfa/setup?email=${encodeURIComponent(userEmail)}`);
       const data = await response.json();
       setSecret(data.secret);
-      
+    //frontend-ul primește otpauthUrl și generează un cod QR (transformând URL-ul într-o imagine QR)
       QRCode.toDataURL(data.otpauthUrl, (err, url) => {
         if (!err) setQrCodeData(url);
       });
